@@ -1,0 +1,183 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header div:first-child img {
+  height: 50px;
+  width: auto;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header div p {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #343a40;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+header div p:hover {
+  color: #007bff;
+}
+
+header div:last-child p {
+  margin-left: 20px;
+}
+
+header div:last-child p:first-child {
+  color: #28a745;
+}
+
+header div:last-child p:last-child {
+  color: #dc3545;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fff3e6;
+  text-align: center;
+}
+
+section > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+section button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+section button:hover {
+  background-color: #ff3d2e;
+}
+
+section img {
+  height: 100px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+section > div:last-child {
+  font-size: 20px;
+  color: #333;
+  max-width: 600px;
+}
+.content {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  color: #444;
+}
+
+.card p {
+  color: #666;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.socials{
+  display: grid;
+  place-items: left;
+}
+/* App.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 80%;
+  opacity: 0;
+  animation: slideIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    transform: translateY(-20px);
+  }
+}
+
