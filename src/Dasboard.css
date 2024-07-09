@@ -1,0 +1,135 @@
+.app {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #343a40;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    padding: 20px;
+}
+
+.user-profile, .recipe-list {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.user-profile h2, .recipe-list h2 {
+    text-align: center;
+}
+
+.user-profile form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-profile input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-profile button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.user-profile button:hover {
+    background-color: #0056b3;
+}
+
+.recipe-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recipe-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.recipe-card:hover {
+    background-color: #e2e6ea;
+}
+
+.recipe-card h3 {
+    margin: 0 0 10px 0;
+}
+
+.recipe-card p {
+    margin: 0;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.user-profile h2 {
+    margin: 1rem 0 0.5rem;
+}
+
+.user-profile p {
+    margin: 0;
+    text-align: center;
+}
+.app {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}

@@ -1,25 +1,40 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import Cookies from 'js-cookie';
 import './log.css';
 
-function LoginForm(){
-    const [email, setEmail] = useState('');
+function LoginForm({ onLoginSuccess }) {
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        // Ваша логика входа
-        console.log('Login:', { email, password });
+        try {
+            const response = await axios.post('http://127.0.0.1:8000/login', {
+                username,
+                password
+            });
+            if (response.status === 200) {
+                const data = response.data;
+                Cookies.set('access_token', data.access_token);
+                onLoginSuccess(username, data.access_token);
+                alert('Login successful');
+            }
+        } catch (error) {
+            console.error('Login error', error);
+            alert('Invalid username or password');
+        }
     };
 
     return (
         <form onSubmit={handleSubmit} className="login-form">
             <h2>Вход</h2>
             <div className="form-group">
-                <label>Email</label>
+                <label>Имя пользователя</label>
                 <input 
-                    type="email" 
-                    value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
+                    type="text" 
+                    value={username} 
+                    onChange={(e) => setUsername(e.target.value)} 
                     required 
                 />
             </div>

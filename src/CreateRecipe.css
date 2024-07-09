@@ -1,0 +1,61 @@
+.create-recipe {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .create-recipe h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .ReactQuill {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  .form-group img {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+  }
